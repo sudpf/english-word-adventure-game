@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Word Adventure - 英语单词冒险</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-overlay">
+            <div id="score-display">
+                <span>关卡: <span id="level-display">1</span></span>
+                <span>分数: <span id="score">0</span></span>
+                <span>金币: <span id="coins">0</span></span>
+                <span>单词: <span id="words">0</span></span>
+            </div>
+            
+            <div id="progress-bar">
+                <div id="progress-label">🏠 家 → 🏫 学校</div>
+                <div id="progress-track">
+                    <div id="progress-fill"></div>
+                    <div id="player-marker">🎒</div>
+                </div>
+            </div>
+            
+            <div id="word-display" class="hidden">
+                <div id="current-word"></div>
+                <div id="word-meaning"></div>
+            </div>
+        </div>
+        
+        <div id="start-screen" class="screen">
+            <h1>🎒 上学路上学单词</h1>
+            <h2>English Word Adventure</h2>
+            
+            <div class="story-box">
+                <p class="story-text">
+                    🌅 清晨的阳光洒进窗户，小明背上书包准备去上学。<br>
+                    在通往学校的路上，有许多闪闪发光的金币，<br>
+                    每个金币上都印着英文字母！<br><br>
+                    💫 帮助小明收集金币，学习英语单词，<br>
+                    顺利到达学校吧！
+                </p>
+            </div>
+            
+            <div class="instructions">
+                <h3>🎮 游戏说明：</h3>
+                <ul>
+                    <li>⬅️ ➡️ 方向键移动</li>
+                    <li>⬆️ 或 空格键 跳跃</li>
+                    <li>收集带字母的金币组成单词</li>
+                    <li>连续收集完整单词获得额外奖励！</li>
+                    <li>到达学校完成关卡！</li>
+                </ul>
+            </div>
+            <button id="start-button" class="game-button">🎒 开始上学之旅</button>
+        </div>
+        
+        <div id="pause-screen" class="screen hidden">
+            <h2>游戏暂停</h2>
+            <button id="resume-button" class="game-button">继续游戏</button>
+            <button id="restart-button" class="game-button">重新开始</button>
+        </div>
+        
+        <div id="game-over-screen" class="screen hidden">
+            <h2 id="game-result-title">🎉 恭喜到达学校！</h2>
+            <div id="final-stats">
+                <p>最终分数: <span id="final-score">0</span></p>
+                <p>学习单词: <span id="words-learned">0</span> 个</p>
+                <p>收集金币: <span id="coins-collected">0</span> 个</p>
+            </div>
+            <button id="play-again-button" class="game-button">🎒 再次出发</button>
+        </div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/flagPole.js"></script>
+    <script src="js/coin.js"></script>
+    <script src="js/platform.js"></script>
+    <script src="js/wordManager.js"></script>
+    <script src="js/level.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
